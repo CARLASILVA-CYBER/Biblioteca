@@ -11,7 +11,7 @@ CREATE TABLE livros (
     genero VARCHAR(255)
 );
 
-CREATE TABLE usuarios (
+CREATE TABLE users (
     id INT AUTO_INCREMENT PRIMARY KEY,
     nome VARCHAR(255),
     email VARCHAR(255),
