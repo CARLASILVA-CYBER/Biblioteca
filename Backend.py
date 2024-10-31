@@ -31,10 +31,10 @@ class Borrow(Resource):
     def post(self):
         data = request.get_json()
         cursor = mysql_connection.cursor()
-        cursor.execute("INSERT INTO emprestimos (id_usuario, id_livro, data_emprestimo) VALUES (%s, %s, NOW())", 
+        cursor.execute("INSERT INTO emprestimos (id_users, id_livro, data_emprestimo) VALUES (%s, %s, NOW())", 
                        (data['user_id'], data['book_id']))
         mysql_connection.commit()
-        user_logs.insert_one({"user_id": data['user_id'], "action": "borrow", "book_id": data['book_id']})
+        user_logs.insert_one({"users_id": data['users_id'], "action": "borrow", "book_id": data['book_id']})
         return jsonify({"message": "Empréstimo realizado com sucesso"})
 
 class Return(Resource):
@@ -49,7 +49,7 @@ class Return(Resource):
 
 class Recommendations(Resource):
     def get(self):
-        user_id = request.args.get('user_id')
+        user_id = request.args.get('users_id')
         recommendations = ["Livro A", "Livro B", "Livro C"]
         return jsonify(recommendations)
 
