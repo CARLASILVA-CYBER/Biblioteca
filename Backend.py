@@ -11,7 +11,7 @@ api = Api(app)
 mysql_connection = pymysql.connect(
     host="localhost",
     user="root",
-    password="password",
+    password=" ",
     database="biblioteca"
 )
 
