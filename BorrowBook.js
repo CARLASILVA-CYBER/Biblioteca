@@ -14,7 +14,7 @@ function BorrowBook() {
     return (
         <div>
             <h2>Empréstimo de Livro</h2>
-            <input type="text" placeholder="ID do Usuário" value={userId} onChange={(e) => setUserId(e.target.value)} />
+            <input type="text" placeholder="ID do User" value={userId} onChange={(e) => setUserId(e.target.value)} />
             <input type="text" placeholder="ID do Livro" value={bookId} onChange={(e) => setBookId(e.target.value)} />
             <button onClick={handleBorrow}>Emprestar</button>
         </div>
