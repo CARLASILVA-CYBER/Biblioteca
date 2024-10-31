@@ -1,3 +1,9 @@
+#npx create-react-app biblioteca-frontend
+#cd biblioteca-frontend
+#npm install axios
+
+
+
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 
