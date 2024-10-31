@@ -5,7 +5,7 @@ import pymysql
 conn = pymysql.connect(
     host="localhost",
     user="root",
-    password="password",
+    password=" ",
     database="biblioteca"
 )
 
